@@ -1,0 +1,26 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e8faff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box{
+    width: 100%;
+    max-width: 1020px;
+    height: 640px;
+    background-color: #fff;
+    border-radius: 3.3rem;
+    box-shadow: 0px 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
