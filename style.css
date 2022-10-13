@@ -50,3 +50,21 @@ main{
     top: 0;
     border-radius: 2rem;
 }
+
+form{
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 27px;
+    margin: 0.3rem;
+}
+
