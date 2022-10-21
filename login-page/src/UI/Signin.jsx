@@ -52,8 +52,11 @@ function Signin() {
                                         <label>Password</label>
                                     </div>
 
-                                    {/* <input type="submit" defaultValue={Sign In} className='sign-btn' /> */}
+                                    <input type="submit" defaultValue={'Sign In'} className='sign-btn' />
 
+                                    <p className='text'>
+                                        <a href="#">Forgot Password?</a>
+                                    </p>
                                 </div>
                             </form>
                         </div>
