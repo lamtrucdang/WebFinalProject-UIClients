@@ -393,3 +393,79 @@ main.sign-up-mode .carousel{
         padding: 1rem 2rem 1.5rem;
     }
     }
+
+
+    /* Nav bar */
+.navbar-custom {
+    background-color: aliceblue;
+    border-color: aliceblue;
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+    font: 700 0.875rem/0.875rem "Poppins", sans-serif;
+    transition: all 0.2s;
+}
+
+.navbar-custom .navbar-brand.logo-img img {
+    width: 2.5rem;
+    height: 10%;
+}
+
+.navbar-custom .navbar-brand.logo-text {
+    font: 700 2rem/1rem "Poppins", sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar-custom .navbar-nav {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.navbar-custom .nav-item .nav-link {
+    padding: 0.625rem 0.75rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link.active {
+    color: rgb(52, 137, 212);
+}
+
+.navbar-custom .nav-item .btn-outline-sm {
+    margin-top: 0.125rem;
+    margin-bottom: 1.375rem;
+    margin-left: 0.5rem;
+    border: 0.125rem solid rgb(52, 137, 212);
+    color: rgb(52, 137, 212);
+}
+
+.navbar-custom .nav-item .btn-outline-sm:hover {
+    border: 0.125rem solid rgb(52, 137, 212);
+    background-color: rgb(52, 137, 212);
+    color: #fff;
+}
+
+.navbar-custom .navbar-toggler {
+    padding: 0;
+    border: none;
+    color: #333;
+    font-size: 2rem;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
+	display: inline-block;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
+	display: inline-block;
+	margin-right: 0.125rem;
+}
