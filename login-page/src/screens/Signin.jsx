@@ -12,35 +12,7 @@ function Signin() {
             <meta http-equiv='X-UA-Compatible' content='IE=edge' />
             <meta name='viewport' content='width=device-width, initial-scale=1.0' />
             <title>Sign in</title>
-
-            <nav className='navbar navbar-expand-lg navbar-dark navbar-custom fixed-top'>
-                <div className='container'>
-                    <a className='navbar-brand logo-img' href="Signin.jsx"><img src="./Logo.png"/></a>
-
-                    <div className='collapse navbar-collapse' id='navbarDefault'>
-                        <ul className='navbar-nav ml-auto'>
-                            <li className='nav-item'>
-                                <a className='nav-link page-scroll' href="./Signin.jsx">HOME</a>
-                            </li>
-                            <li className='nav-item'>
-                                <a className='nav-link page-scroll' href="./Aboutus.jsx">ABOUT US</a>
-                            </li>
-                            <li className='nav-item'>
-                                <a className='nav-link' href="./Course.jsx">COURSES</a>
-                            </li>
-                        </ul>
-
-                        <span className='nav-item'>
-                            <a className='btn-outline-sm signin' href="Signin.jsx">Sign In</a>
-                        </span>
-                        <span className='nav-item'>
-                            <a className='btn-outline-sm signup' href="Signup.jsx">Sign Up</a>
-                        </span>
-                    </div>
-
-                </div>
-            </nav>
-
+            
             <main>
                 <div className='box'>
                     <div className='inner-box'>

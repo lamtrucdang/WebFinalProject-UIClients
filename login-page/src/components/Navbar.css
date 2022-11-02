@@ -1,0 +1,56 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.navbar .navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navbar-list li, button {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar .navbar-list li a {
+    text-decoration: none;
+    color: #151515;
+    font-size: 1rem;
+    font-weight: 400;    
+    transition: 0.2s ease-in-out;
+}
+
+.navbar .navbar-list li a:hover {
+    color: rgb(129, 196, 255);
+}
+
+.navbar .navbar-list .nav-btn {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: #151515;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.navbar .navbar-list .nav-btn:hover {
+    color: #151515;
+    background-color: rgb(129, 196, 255);
+}
+.navbar .logo-img {
+    width: 55px;
+    margin: 0.3rem;
+}
