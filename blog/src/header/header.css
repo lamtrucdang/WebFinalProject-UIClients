@@ -9,20 +9,20 @@
     
 }
 
-.headerTitlesSm {
+/* .headerTitlesSm {
     position: absolute;
     top: 7%;
     font-size: 45px;
     font-family: 'Lora', serif;
-}
+} */
 
 .headerTitlesLg{
     position: absolute;
-    top: 17%;
-    font-size: 100px;
+    top: 6.5%;
+    font-size: 130px;
     font-family: 'Great Vibes', cursive;
 }
 
 .headerImg{
-    /* object-fit: cover; */
+    width: 1440px;
 }

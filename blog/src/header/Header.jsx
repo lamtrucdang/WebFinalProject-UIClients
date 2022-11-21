@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <div className="header">
             <div className="headerTitles">
-            <span className="headerTitlesSm">Glow</span>
+            {/* <span className="headerTitlesSm">Glow</span> */}
             <span className="headerTitlesLg">Blog</span>
             </div>
             <img className="headerImg"
