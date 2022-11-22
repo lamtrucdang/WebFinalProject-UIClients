@@ -13,7 +13,13 @@
     justify-content: center;
 }
 
-.navbar .navbar-list li, button {
+.navbar .navbar-list button {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar .navbar-list li {
     list-style: none;
     padding: 0 20px;
     position: relative;
@@ -25,6 +31,8 @@
     font-size: 1rem;
     font-weight: 400;    
     transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 40px;
 }
 
 .navbar .navbar-list li a:hover {
