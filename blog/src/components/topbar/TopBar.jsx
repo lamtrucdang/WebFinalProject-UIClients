@@ -10,6 +10,7 @@ export default function TopBar() {
       <div className="topLeft">
       <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
+        {/* <img className ="topLogo" src="./img/Logo.png"> </img> */}
       </div>
     
       <div className="topCenter"></div>

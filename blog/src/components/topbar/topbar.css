@@ -29,6 +29,10 @@
     cursor: pointer;
   }
   
+  .topLogo {
+    width: 40px;
+    height: 40px;
+  }
 
   .topImg {
     width: 40px;
