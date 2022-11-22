@@ -19,8 +19,10 @@ function Signin() {
                         <div className='forms-wrap'>
                             <form action="Signin.jsx" autoComplete='off' className='sign-in-form'>
                                 <div className='logo'>
-                                    <img src="./Logo.png" alt="Glow" />
-                                    <h4>Glow</h4>
+                                    <a href="./LandingPage.jsx">
+                                        <img src="./Logo.png" alt="Glow"/>
+                                        <h4 className='logo-text'>Glow</h4>
+                                    </a>
                                 </div>
 
                                 <div className='heading'>
