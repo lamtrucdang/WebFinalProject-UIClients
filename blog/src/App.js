@@ -11,7 +11,7 @@ function App() {
       {/* <Single/> */}
       {/* <Write/> */}
       {/* <Settings/> */}
-      <Login/>
+      {/* <Login/> */}
       <p></p>
     </div>
   );
