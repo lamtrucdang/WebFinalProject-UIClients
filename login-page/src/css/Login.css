@@ -140,7 +140,29 @@ form.sign-up-form{
     padding: 0;
     font-size: 0.95rem;
     color: #151111;
+    z-index: 1;
     transition: 0.4s;
+}
+
+.input-field:focus + .form-label{
+    top: -0.5rem;
+    left: 0.8rem;
+    color: rgb(129, 196, 255);
+    font-size: 0.7rem;
+    font-weight: 500;
+    z-index: 10;
+}
+
+/* .input-field:not(:placeholder-shown).input-field:not(:focus) + .form-label{
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    z-index: 10;
+} */
+
+.input-field:focus{
+    border-bottom: 1px solid rgb(53, 149, 234);
 }
 
 label{

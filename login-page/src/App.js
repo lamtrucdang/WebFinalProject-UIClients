@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Signin from './screens/Signin';
+import Login from './screens/Login';
+import Register from './screens/Register';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Signin />
+      <Register />
     </div>
   );
 }

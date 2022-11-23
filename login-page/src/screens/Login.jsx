@@ -1,26 +1,26 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import '../index.css';
+import '../css/Login.css';
 
-const root = 
+const root =
     ReactDOM.createRoot(document.getElementById('root'));
 
-function Signin() {
+function Login() {
     return (
         <div>
-            <meta charSet='UTF-8'/>
+            <meta charSet='UTF-8' />
             <meta http-equiv='X-UA-Compatible' content='IE=edge' />
             <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-            <title>Sign in</title>
-            
+            <title>Log In</title>
+
             <main>
                 <div className='box'>
                     <div className='inner-box'>
                         <div className='forms-wrap'>
-                            <form action="Signin.jsx" autoComplete='off' className='sign-in-form'>
+                            <form action="Login.jsx" autoComplete='off' className='sign-in-form'>
                                 <div className='logo'>
                                     <a href="./LandingPage.jsx">
-                                        <img src="./Logo.png" alt="Glow"/>
+                                        <img src="./Logo.png" alt="Glow" />
                                         <h4 className='logo-text'>Glow</h4>
                                     </a>
                                 </div>
@@ -28,91 +28,38 @@ function Signin() {
                                 <div className='heading'>
                                     <h2>Welcome Back</h2>
                                     <h6>Not registered yet?</h6>
-                                    <a href="./Signup.jsx" className='toggle'> Sign up</a>
+                                    <a href="./Register.jsx" className='toggle'> Register here</a>
                                 </div>
 
                                 <div className='actual-form'>
                                     <div className='input-wrap'>
-                                        <input 
+                                        <input
+                                            placeholder=''
                                             type='text'
                                             minLength={4}
                                             className='input-field'
                                             autoComplete='off'
                                             required
                                         />
-                                        <label>Name</label>
+                                        <label className='form-label'>Username</label>
                                     </div>
 
                                     <div className='input-wrap'>
-                                        <input 
+                                        <input
+                                            placeholder=''
                                             type='password'
                                             minLength={8}
                                             className='input-field'
                                             autoComplete='off'
                                             required
                                         />
-                                        <label>Password</label>
+                                        <label className='form-label'>Password</label>
                                     </div>
 
-                                    <input type="submit" defaultValue={'Sign In'} className='sign-btn' />
+                                    <input type="submit" defaultValue={'Log In'} className='sign-btn' />
 
                                     <p className='text'>
                                         <a href="#">Forgot Password?</a>
-                                    </p>
-                                </div>
-                            </form>
-
-                            <form action="Signin.jsx" autoComplete='off' className='sign-up-form'>
-                                <div className='logo'>
-                                    <img src="./Logo.png" alt="Glow" />
-                                    <h4>Glow</h4>
-                                </div>
-
-                                <div className='heading'>
-                                    <h2>Get Started</h2>
-                                    <h6>Already have an account?</h6>
-                                    <a href="sign-in-form" className='toggle'>Sign in</a>
-                                </div>
-
-                                <div className='actual-form'>
-                                    <div className='input-wrap'>
-                                        <input 
-                                            type='text'
-                                            minLength={4}
-                                            className='input-field'
-                                            autoComplete='off'
-                                            required
-                                        />
-                                        <label>Name</label>
-                                    </div>
-
-                                    <div className='input-wrap'>
-                                        <input 
-                                            type='email'
-                                            className='input-field'
-                                            autoComplete='off'
-                                            required
-                                        />
-                                        <label>Email</label>
-                                    </div>
-
-                                    <div className='input-wrap'>
-                                        <input 
-                                            type='password'
-                                            minLength={8}
-                                            className='input-field'
-                                            autoComplete='off'
-                                            required
-                                        />
-                                        <label>Password</label>
-                                    </div>
-
-                                    <input type="submit" defaultValue={'Sign Up'} className='sign-btn' />
-
-                                    <p className='text'>
-                                        I agree to the 
-                                        <a href="#">Terms of Service</a> and 
-                                        <a href="#">Privacy Policy</a>
                                     </p>
                                 </div>
                             </form>
@@ -152,4 +99,4 @@ function Signin() {
 
 
 
-export default Signin;
+export default Login;
