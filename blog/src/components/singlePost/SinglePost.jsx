@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./singlePost.css";
 
 export default function SinglePost() {
@@ -21,8 +21,8 @@ export default function SinglePost() {
           <span>
             Author:
             <b className="singlePostAuthor">
-              {/* <Link className="link" to="/posts?username=Safak">
-                Safak
+              {/* <Link className="link" to="/posts?username=SunHyun">
+                SunHyun
               </Link> */}
               SunHyun
             </b>
