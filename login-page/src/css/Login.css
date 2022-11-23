@@ -153,13 +153,13 @@ form.sign-up-form{
     z-index: 10;
 }
 
-/* .input-field:not(:placeholder-shown).input-field:not(:focus) + .form-label{
+.input-field:not(:placeholder-shown).input-field:not(:focus) + .form-label{
     top: -0.5rem;
     left: 0.8rem;
     font-size: 0.7rem;
     font-weight: 500;
     z-index: 10;
-} */
+}
 
 .input-field:focus{
     border-bottom: 1px solid rgb(53, 149, 234);

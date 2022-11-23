@@ -41,7 +41,7 @@ function Register() {
                         </div>
 
                         <div className='forms-wrap'>
-                            <form action="Register.jsx" autoComplete='off' className='sign-up-form' placeholder='enter your name'>
+                            <form action="Register.jsx" autoComplete='off' className='sign-up-form'>
                                 <div className='logo'>
                                     <a href="./LandingPage.jsx">
                                         <img src="./Logo.png" alt="Glow"/>
@@ -58,34 +58,37 @@ function Register() {
                                 <div className='actual-form'>
                                     <div className='input-wrap'>
                                         <input 
+                                            placeholder=''
                                             type='text'
                                             minLength={4}
                                             className='input-field'
                                             autoComplete='off'
                                             required
                                         />
-                                        <label>Name</label>
+                                        <label className='form-label'>Name</label>
                                     </div>
 
                                     <div className='input-wrap'>
                                         <input 
+                                            placeholder=''
                                             type='email'
                                             className='input-field'
                                             autoComplete='off'
                                             required
                                         />
-                                        <label>Email</label>
+                                        <label className='form-label'>Email</label>
                                     </div>
 
                                     <div className='input-wrap'>
                                         <input 
+                                            placeholder=''
                                             type='password'
                                             minLength={8}
                                             className='input-field'
                                             autoComplete='off'
                                             required
                                         />
-                                        <label>Password</label>
+                                        <label className='form-label'>Password</label>
                                     </div>
 
                                     <input type="submit" defaultValue={'Register'} className='sign-btn' />
