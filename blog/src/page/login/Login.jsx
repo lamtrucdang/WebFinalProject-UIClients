@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm">
-        <label>Email</label>
+      <span className="loginTitle">Welcome Back</span>
+      
+      <form action="Login.jsx" autoComplete="off" className="loginForm">
+        <div className="heading">
+          <h6>Not registered yet?</h6>
+          <a href="./Register.jsx" className='toggle'> Register here</a>
+       </div>
+<label>Email</label>
         <input className="loginInput" type="text" placeholder="Enter your email..." />
         <label>Password</label>
         <input className="loginInput" type="password" placeholder="Enter your password..." />

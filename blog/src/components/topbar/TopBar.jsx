@@ -6,8 +6,11 @@ export default function Topbar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
+        <div className="logo">
+        <a href="/">
+            <img src="./img/Logo.png" alt="Glow" />
+        </a>
+        </div>
       </div>
       <div className="topCenter">
         <ul className="topList">
