@@ -9,7 +9,7 @@ export default function Login() {
       <form action="Login.jsx" autoComplete="off" className="loginForm">
         <div className="heading">
           <h6>Not registered yet?</h6>
-          <a href="./Register.jsx" className='toggle'> Register here</a>
+          <a href="./Register.jsx" className='toggle'> <Link className="link" to="/register">Register Here</Link></a>
        </div>
 <label>Email</label>
         <input className="loginInput" type="text" placeholder="Enter your email..." />
@@ -17,9 +17,9 @@ export default function Login() {
         <input className="loginInput" type="password" placeholder="Enter your password..." />
         <button className="loginButton">Login</button>
       </form>
-        <button className="loginRegisterButton">
+        {/* <button className="loginRegisterButton">
         <Link className="link" to="/register">Register</Link>
-        </button>
+        </button> */}
     </div> 
   );
 }

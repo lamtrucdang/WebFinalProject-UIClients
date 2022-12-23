@@ -7,11 +7,11 @@ export default function SinglePost() {
       <div className="singlePostWrapper">
         <img
           className="singlePostImg"
-          src="./img/postphoto.jpeg"
+          src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt=""
         />
         <h1 className="singlePostTitle">
-        Then it's time for us to "bloom"
+           I just want to be a normal person
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -21,13 +21,12 @@ export default function SinglePost() {
           <span>
             Author:
             <b className="singlePostAuthor">
-              {/* <Link className="link" to="/posts?username=SunHyun">
-                SunHyun
-              </Link> */}
-              SunHyun
+              <Link className="link" to="/posts?username=Sun">
+                Sun
+              </Link>
             </b>
           </span>
-          <span className="singlePostDate">1 hour ago</span>
+          <span>1 day ago</span>
         </div>
         <p className="singlePostDesc">
         Sun hopes you don't blame yourself for not finding the job of your dreams,
@@ -52,6 +51,7 @@ export default function SinglePost() {
             <br/>
         
         </p>
+
       </div>
     </div>
   );
