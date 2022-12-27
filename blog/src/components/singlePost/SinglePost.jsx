@@ -1,57 +1,106 @@
+import axios from "axios";
+import { useContext, useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
 import "./singlePost.css";
 
 export default function SinglePost() {
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const [post, setPost] = useState({});
+  const PF = "http://localhost:3001/images/";
+  const { user } = useContext(Context);
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [updateMode, setUpdateMode] = useState(false);
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setPost(res.data);
+      setTitle(res.data.title);
+      setDesc(res.data.desc);
+    };
+    getPost();
+  }, [path]);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/posts/${post._id}`, {
+        data: { username: user.username },
+      });
+      window.location.replace("/");
+    } catch (err) {}
+  };
+
+  const handleUpdate = async () => {
+    try {
+      await axios.put(`/posts/${post._id}`, {
+        username: user.username,
+        title,
+        desc,
+      });
+      setUpdateMode(false)
+    } catch (err) {}
+  };
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        <img
-          className="singlePostImg"
-          src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          alt=""
-        />
-        <h1 className="singlePostTitle">
-           I just want to be a normal person
-          <div className="singlePostEdit">
-            <i className="singlePostIcon far fa-edit"></i>
-            <i className="singlePostIcon far fa-trash-alt"></i>
-          </div>
-        </h1>
+        {post.photo && (
+          <img src={PF + post.photo} alt="" className="singlePostImg" />
+        )}
+        {updateMode ? (
+          <input
+            type="text"
+            value={title}
+            className="singlePostTitleInput"
+            autoFocus
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        ) : (
+          <h1 className="singlePostTitle">
+            {title}
+            {post.username === user?.username && (
+              <div className="singlePostEdit">
+                <i
+                  className="singlePostIcon far fa-edit"
+                  onClick={() => setUpdateMode(true)}
+                ></i>
+                <i
+                  className="singlePostIcon far fa-trash-alt"
+                  onClick={handleDelete}
+                ></i>
+              </div>
+            )}
+          </h1>
+        )}
         <div className="singlePostInfo">
-          <span>
+          <span className="singlePostAuthor">
             Author:
-            <b className="singlePostAuthor">
-              <Link className="link" to="/posts?username=Sun">
-                Sun
-              </Link>
-            </b>
+            <Link to={`/?user=${post.username}`} className="link">
+              <b> {post.username}</b>
+            </Link>
           </span>
-          <span>1 day ago</span>
+          <span className="singlePostDate">
+            {new Date(post.createdAt).toDateString()}
+          </span>
         </div>
-        <p className="singlePostDesc">
-        Sun hopes you don't blame yourself for not finding the job of your dreams,
-        or feel sorry for yourself because looking around at your friends are better.
-        It's really not your fault that you've tried your best but still can't get what
-        you want.
-          <br />
-          <br />
-        Sometimes Sun thinks, is our society too fetish for the early success of just
-        a few? This inadvertently makes young people think that it is a common time to
-        mark talent. If you do not achieve the same achievements as the minority group,
-        it means that you are inferior. We are not wrong to honor the "flowers that soon bloom", 
-        but do not let early success become an obsession for you, for yourself, for those around 
-        you while we are blooming in different directions. , with different speeds and starting
-        points.
-        
-        Everyone's success has its own name and definition. We, as "flowers", whether they bloom 
-        sooner or later, they are all beautiful and sweetly scented. Hopefully, you will try your
-        best, be patient and a little steadfast on your own path and wait for your flower season 
-        to "bloom".
-            <br/>
-            <br/>
-        
-        </p>
-
+        {updateMode ? (
+          <textarea
+            className="singlePostDescInput"
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
+          />
+        ) : (
+          <p className="singlePostDesc">{desc}</p>
+        )}
+        {updateMode && (
+          <button className="singlePostButton" onClick={handleUpdate}>
+            Update
+          </button>
+        )}
       </div>
     </div>
   );
