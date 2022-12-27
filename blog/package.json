@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost3001/api/"
+  "proxy": "hhttps://final-blog-api.vercel.app/api/"
 }

@@ -1,6 +1,6 @@
-.header{
+/* .header{
     margin-top: 70px;
-}
+} */
 .headerTitles{
     display: flex;
     flex-direction: column;
@@ -19,9 +19,9 @@
 .headerTitlesLg{
     position: absolute;
     top: 6.5%;
-    font-size: 130px;
+    font-size: 120px;
     font-family: 'Great Vibes', cursive;
-    margin: 30px;
+    margin: 20px;
 }
 
 .headerImg{
