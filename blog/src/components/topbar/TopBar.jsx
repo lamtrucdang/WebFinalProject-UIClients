@@ -13,10 +13,9 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
+        <Link className="link" to="/">
+          <img className="logo" src="./img/Logo.png" alt="" />
+        </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">

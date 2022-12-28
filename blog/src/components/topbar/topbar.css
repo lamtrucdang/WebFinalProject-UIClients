@@ -68,6 +68,7 @@ input {
   cursor: pointer;
 }
 
-.logo img {
-  width: 60px;
+.logo {
+  width: 3.5rem;
+  height: auto;
 }
