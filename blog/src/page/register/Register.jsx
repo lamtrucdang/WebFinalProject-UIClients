@@ -9,6 +9,9 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
@@ -18,10 +21,17 @@ export default function Register() {
         email,
         password,
       });
+      const res2 = await axios.post("/auth/login", {
+        username,
+        password,
+      });
       res.data && window.location.replace("/login");
+      //res2.data && window.location.replace("/login");
+
     } catch (err) {
       setError(true);
     }
+    
   };
   return (
     <div className="register">

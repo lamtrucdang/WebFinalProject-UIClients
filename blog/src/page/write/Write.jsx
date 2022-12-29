@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import "./write.css";
 import axios from "axios";
-import { Context } from "../../context/Context";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
-  const { user } = useContext(Context);
+  const { user } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
